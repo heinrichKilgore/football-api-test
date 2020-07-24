@@ -16,7 +16,7 @@ const Matches = (props)=>{
     useEffect(()=>{
 
         const getMatches=async ()=>{
-            
+            setLoading(true)
             let response= await fooballApi.get(`/v2/competitions/${props.match.params.matchId}/matches`,{
                 params:{
                     plan:'TIER_ONE',
@@ -58,7 +58,7 @@ const Matches = (props)=>{
        
         
     }
-    ,[])
+    ,[props.match.params.matchId])
 
     if(loading){
         return <div>Cargando...</div>
