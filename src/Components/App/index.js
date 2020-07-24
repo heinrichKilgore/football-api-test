@@ -10,6 +10,7 @@ import {connect} from 'react-redux'
 import {getCompetitions,getUsers,selectUser} from '../../Actions'
 import { useEffect } from 'react'
 import Bet1 from '../Bet1'
+import FinishBet from '../FinishBet'
 
 
 
@@ -91,7 +92,9 @@ const App = (props)=>{
                         </Nav>
                         <Nav className="mr-auto">
                             <NavDropdown title="Admin" id="collasible-nav-dropdown">
-                                {competitionsMenu}
+                            <NavDropdown.Item as={Link} to="/bets/finish">
+                                Finalizar apuesta
+                            </NavDropdown.Item>
                             </NavDropdown>
                            
                         </Nav>
@@ -136,6 +139,7 @@ const App = (props)=>{
                             <Route path="/bet1/:matchId" exact component={Bet1}>
 
                             </Route>
+                            <Route path="/bets/finish" exact component={FinishBet}/>
                             
                         </Col>
                         

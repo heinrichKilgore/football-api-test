@@ -70,7 +70,7 @@ class Match extends React.Component{
                                 }
                             }
                         }>Apostar marcador</MenuItem>
-                        <MenuItem>Apostar resultado</MenuItem>
+                        {/* <MenuItem>Apostar resultado</MenuItem> */}
                         
                     </Menu>
 

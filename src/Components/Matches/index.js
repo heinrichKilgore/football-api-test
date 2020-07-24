@@ -16,7 +16,7 @@ const Matches = (props)=>{
     useEffect(()=>{
 
         const getMatches=async ()=>{
-            debugger
+            
             let response= await fooballApi.get(`/v2/competitions/${props.match.params.matchId}/matches`,{
                 params:{
                     plan:'TIER_ONE',

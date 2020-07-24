@@ -40,6 +40,17 @@ export const makeBetOnScore = (user,matchId,bet,amount) => {
     }
 }
 
+export const finishBet=(matchId,results,bets)=>{
+    return{
+        type:'FINISH_BET',
+        payload:{
+            matchId:matchId,
+            results:results,
+            bets:bets
+        }
+    }
+}
+
 export const getUsers=()=>{
     return {
         type:'GET_USERS'
